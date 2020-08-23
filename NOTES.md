@@ -22,6 +22,7 @@
 ### Product team (backend)
 - prepare the index
 ```
+- know the query beforehand
 - denormalize if needed
 - recreate the index if there are new requirements
 ```
