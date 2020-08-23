@@ -3,13 +3,6 @@
 - document
 - index before query
 
-### Advantage
-- speed and scalability
-- relevance/score
-- full-text index
-- could RDS do this? yeah
-
-
 # Work We Need
 ### Data team
 - profile and clean
@@ -39,6 +32,7 @@
 - score
 - customize the index (multiple index, same fields)
 - scale infinitely
+- could RDS do this? yeah
 
 # What cant we do with ES
 - joins
