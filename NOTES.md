@@ -22,6 +22,7 @@
 - prepare the index
 - pull data from data warehous
 - formulate the query
+- serve the data via REST
 
 ## Product team (frontend)
-- request user parameters
+- invoke via REST
