@@ -26,7 +26,8 @@ recreate the index if there are new requirements
 - pull data from data warehous
 - formulate the query
 ```
-score/sort
+- score/sort
+- restrict access
 ```
 - serve the data via REST
 
