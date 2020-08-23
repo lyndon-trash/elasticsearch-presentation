@@ -10,6 +10,7 @@
 - speed and scalability
 - relevance/score
 - full-text index
+- could RDS do this? yeah
 
 
 
