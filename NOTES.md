@@ -22,7 +22,8 @@
 ### Product team (backend)
 - prepare the index
 ```
-recreate the index if there are new requirements
+- denormalize if needed
+- recreate the index if there are new requirements
 ```
 - pull data from data warehous
 - formulate the query
