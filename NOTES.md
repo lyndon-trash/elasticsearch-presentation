@@ -14,5 +14,14 @@
 
 
 ## Work We Need
-- data team: gather data into a normalized form
-- product team: pull the data from redshift
+### Data team
+- profile and clean
+- aggregate data into a normalized form
+
+### Product team (backend)
+- prepare the index
+- pull data from data warehous
+- formulate the query
+
+## Product team (frontend)
+- request user parameters
