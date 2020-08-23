@@ -1,0 +1,217 @@
+DELETE candidates_demo
+PUT candidates_demo
+{
+    "mappings": {
+        "dynamic": false,
+        "properties": {
+            "fullName": {
+                "type": "text"
+            },
+            "summary": {
+                "type": "text"
+            },
+            "location": {
+                "type": "geo_point"
+            },
+            "currentFunction": {
+                "type": "keyword"
+            },
+            "likelyToJump": {
+                "type": "boolean"
+            },
+            "yearsOfExperience": {
+              "type": "double"
+            },
+            "jobHistories": {
+                "type": "nested",
+                "properties": {
+                    "jobTitle": {
+                        "type": "text"
+                    },
+                    "industry": {
+                        "type": "keyword`"
+                    },
+                    "yearsOfExperience": {
+                        "type": "double"
+                    },
+                    "current": {
+                      "type": "boolean"
+                    }
+                }
+            }
+        }
+    }
+}
+
+POST /_aliases
+{
+  "actions": [
+    {
+      "add": {
+        "index": "candidates_demo",
+        "alias": "candidates_demo_alias1"
+      }
+    }
+  ]
+}
+
+PUT candidates_demo/_doc/CN10001
+{
+  "fullName": "Olaf Oldtimer",
+  "summary": "An oldtimer in the IT Industry",
+  "location": [40.71, 74.00],
+  "currentFunction": "FN_100001",
+  "likelyToJump": true,
+  "yearsOfExperience": 15,
+  "jobHistories": [
+    {
+      "jobTitle": "Sr. Software Engineer",
+      "industry": "IND_100001",
+      "industryName": "IT Engineering",
+      "yearsOfExperience": 10,
+      "current": true
+    },
+    {
+      "jobTitle": "Jr. Tech Support",
+      "industry": "IND_100002",
+      "industryName": "IT Support",
+      "yearsOfExperience": 5,
+      "current": false
+    }
+  ]
+}
+
+PUT candidates_demo/_doc/CN10002
+{
+  "fullName": "Nero Newbie",
+  "summary": "A newbie in the IT Industry",
+  "location": [40.71, 74.00],
+  "currentFunction": "FN_100001",
+  "likelyToJump": false,
+  "yearsOfExperience": 3,
+  "jobHistories": [
+    {
+      "jobTitle": "Jr. Software Engineer",
+      "industry": "IND_100001",
+      "industryName": "IT Engineering",
+      "yearsOfExperience": 2,
+      "current": true
+    },
+    {
+      "jobTitle": "Intern",
+      "industry": "IND_100001",
+      "industryName": "IT Engineering",
+      "yearsOfExperience": 1,
+      "current": false
+    }
+  ]
+}
+
+PUT candidates_demo/_doc/CN10003
+{
+  "fullName": "Marco Midd",
+  "summary": "Worked as a Software Engineer for quite a while",
+  "location": [40.71, 74.00],
+  "currentFunction": "FN_100001",
+  "likelyToJump": true,
+  "yearsOfExperience": 10,
+  "jobHistories": [
+    {
+      "jobTitle": "Sr. Software Engineer",
+      "industry": "IND_100001",
+      "industryName": "IT Engineering",
+      "yearsOfExperience": 5,
+      "current": true
+    },
+    {
+      "jobTitle": "Jr. Software Engineer",
+      "industry": "IND_100001",
+      "industryName": "IT Engineering",
+      "yearsOfExperience": 4,
+      "current": false
+    },
+    {
+      "jobTitle": "Intern",
+      "industry": "IND_100001",
+      "industryName": "IT Engineering",
+      "yearsOfExperience": 1,
+      "current": false
+    }
+  ]
+}
+
+GET candidates_demo/_search
+{
+  "explain": false,
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "constant_score": {
+            "filter": {
+              "term": {
+                "likelyToJump": {
+                  "value": true
+                }
+              }
+            },
+            "boost": 1
+          }
+        },
+        {
+          "constant_score": {
+            "filter": {
+              "range": {
+                "yearsOfExperience": {
+                  "gte": 15
+                }
+              }
+            },
+            "boost": 1.5
+          }
+        }
+      ]
+    }
+  }
+}
+
+GET candidates_demo/_search
+{
+  "explain": false,
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "constant_score": {
+            "filter": {
+              "range": {
+                "yearsOfExperience": {
+                  "gte": 5
+                }
+              }
+            },
+            "boost": 1
+          }
+        },
+        {
+          "nested": {
+            "path": "jobHistories",
+            "query": {
+              "bool": {
+                "should": [
+                  {
+                    "range": {
+                      "jobHistories.yearsOfExperience": {
+                        "gte": 5
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
