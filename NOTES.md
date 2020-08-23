@@ -6,6 +6,11 @@
 - document
 - index before query
 
+## Advantage
+- speed and scalability
+- relevance/score
+- full-text index
+
 
 
 ## Work We Need
