@@ -15,3 +15,4 @@
 
 ## Work We Need
 - data team: gather data into a normalized form
+- product team: pull the data from redshift
