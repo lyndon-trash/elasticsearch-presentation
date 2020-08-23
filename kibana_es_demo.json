@@ -79,7 +79,7 @@ POST /_aliases
   ]
 }
 
-PUT candidates_demo/_doc/CN10001
+PUT candidates_demo/_doc/CN_10001
 {
   "fullName": "Olaf Oldtimer",
   "summary": "An oldtimer in the IT Industry",
@@ -105,7 +105,7 @@ PUT candidates_demo/_doc/CN10001
   ]
 }
 
-PUT candidates_demo/_doc/CN10002
+PUT candidates_demo/_doc/CN_10002
 {
   "fullName": "Marco Midd",
   "summary": "Worked as a Software Engineer for quite a while",
@@ -138,7 +138,7 @@ PUT candidates_demo/_doc/CN10002
   ]
 }
 
-PUT candidates_demo/_doc/CN10003
+PUT candidates_demo/_doc/CN_10003
 {
   "fullName": "Nero Newbie",
   "summary": "A newbie in the IT Industry",
@@ -229,7 +229,6 @@ GET candidates_demo/_search
     }
   }
 }
-
 
 GET candidates_demo/_analyze
 {
