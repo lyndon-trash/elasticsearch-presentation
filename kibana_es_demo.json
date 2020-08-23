@@ -29,7 +29,7 @@ PUT candidates_demo
                         "type": "text"
                     },
                     "industry": {
-                        "type": "keyword`"
+                        "type": "keyword"
                     },
                     "yearsOfExperience": {
                         "type": "double"
@@ -83,32 +83,6 @@ PUT candidates_demo/_doc/CN10001
 
 PUT candidates_demo/_doc/CN10002
 {
-  "fullName": "Nero Newbie",
-  "summary": "A newbie in the IT Industry",
-  "location": [40.71, 74.00],
-  "currentFunction": "FN_100001",
-  "likelyToJump": false,
-  "yearsOfExperience": 3,
-  "jobHistories": [
-    {
-      "jobTitle": "Jr. Software Engineer",
-      "industry": "IND_100001",
-      "industryName": "IT Engineering",
-      "yearsOfExperience": 2,
-      "current": true
-    },
-    {
-      "jobTitle": "Intern",
-      "industry": "IND_100001",
-      "industryName": "IT Engineering",
-      "yearsOfExperience": 1,
-      "current": false
-    }
-  ]
-}
-
-PUT candidates_demo/_doc/CN10003
-{
   "fullName": "Marco Midd",
   "summary": "Worked as a Software Engineer for quite a while",
   "location": [40.71, 74.00],
@@ -129,6 +103,32 @@ PUT candidates_demo/_doc/CN10003
       "industryName": "IT Engineering",
       "yearsOfExperience": 4,
       "current": false
+    },
+    {
+      "jobTitle": "Intern",
+      "industry": "IND_100001",
+      "industryName": "IT Engineering",
+      "yearsOfExperience": 1,
+      "current": false
+    }
+  ]
+}
+
+PUT candidates_demo/_doc/CN10003
+{
+  "fullName": "Nero Newbie",
+  "summary": "A newbie in the IT Industry",
+  "location": [40.71, 74.00],
+  "currentFunction": "FN_100001",
+  "likelyToJump": false,
+  "yearsOfExperience": 3,
+  "jobHistories": [
+    {
+      "jobTitle": "Jr. Software Engineer",
+      "industry": "IND_100001",
+      "industryName": "IT Engineering",
+      "yearsOfExperience": 2,
+      "current": true
     },
     {
       "jobTitle": "Intern",
@@ -177,41 +177,43 @@ GET candidates_demo/_search
 
 GET candidates_demo/_search
 {
-  "explain": false,
+  "explain": true,
   "query": {
-    "bool": {
-      "should": [
-        {
-          "constant_score": {
-            "filter": {
-              "range": {
-                "yearsOfExperience": {
-                  "gte": 5
+    "nested": {
+      "path": "jobHistories",
+      "query": {
+        "bool": {
+          "must": [
+            {
+              "term": {
+                "jobHistories.industry": {
+                  "value": "IND_100001"
                 }
               }
             },
-            "boost": 1
-          }
-        },
-        {
-          "nested": {
-            "path": "jobHistories",
-            "query": {
-              "bool": {
-                "should": [
-                  {
-                    "range": {
-                      "jobHistories.yearsOfExperience": {
-                        "gte": 5
-                      }
-                    }
-                  }
-                ]
+            {
+              "range": {
+                "jobHistories.yearsOfExperience": {
+                  "gte": 5
+                }
               }
             }
-          }
+          ]
         }
-      ]
+      },
+      "score_mode": "sum"
     }
   }
+}
+
+
+GET candidates_demo/_analyze
+{
+  "text": "Worked as a Software Engineer for quite a while"
+}
+
+GET candidates_demo/_analyze
+{
+  "analyzer": "english",
+  "text": "Worked as a Software Engineer for quite a while"
 }
