@@ -1,46 +1,70 @@
 DELETE candidates_demo
 PUT candidates_demo
 {
-    "mappings": {
-        "dynamic": false,
+  "mappings": {
+    "dynamic": false,
+    "properties": {
+      "fullName": {
+        "type": "text"
+      },
+      "summary": {
+        "type": "text"
+      },
+      "location": {
+        "type": "geo_point"
+      },
+      "currentFunction": {
+        "type": "keyword"
+      },
+      "likelyToJump": {
+        "type": "boolean"
+      },
+      "yearsOfExperience": {
+        "type": "double"
+      },
+      "jobHistories": {
+        "type": "nested",
         "properties": {
-            "fullName": {
-                "type": "text"
-            },
-            "summary": {
-                "type": "text"
-            },
-            "location": {
-                "type": "geo_point"
-            },
-            "currentFunction": {
-                "type": "keyword"
-            },
-            "likelyToJump": {
-                "type": "boolean"
-            },
-            "yearsOfExperience": {
-              "type": "double"
-            },
-            "jobHistories": {
-                "type": "nested",
-                "properties": {
-                    "jobTitle": {
-                        "type": "text"
-                    },
-                    "industry": {
-                        "type": "keyword"
-                    },
-                    "yearsOfExperience": {
-                        "type": "double"
-                    },
-                    "current": {
-                      "type": "boolean"
-                    }
-                }
-            }
+          "jobTitle": {
+            "type": "text"
+          },
+          "industry": {
+            "type": "keyword"
+          },
+          "yearsOfExperience": {
+            "type": "double"
+          },
+          "current": {
+            "type": "boolean"
+          }
         }
+      }
     }
+  },
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "my_analyzer_for_autocomplete": {
+          "tokenizer": "my_tokenizer",
+          "filter": [
+            "lowercase"
+          ]
+        }
+      },
+      "tokenizer": {
+        "my_tokenizer": {
+          "type": "edge_ngram",
+          "min_gram": 3,
+          "max_gram": 15,
+          "token_chars": [
+            "letter",
+            "digit",
+            "whitespace"
+          ]
+        }
+      }
+    }
+  }
 }
 
 POST /_aliases
@@ -216,4 +240,10 @@ GET candidates_demo/_analyze
 {
   "analyzer": "english",
   "text": "Worked as a Software Engineer for quite a while"
+}
+
+GET candidates_demo/_analyze
+{
+  "analyzer": "my_analyzer_for_autocomplete",
+  "text": "Software Engineer"
 }
