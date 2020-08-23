@@ -1,20 +1,16 @@
-# Notes
-
-
-## What is ES
+# What is ES
 - search index
 - document
 - index before query
 
-## Advantage
+### Advantage
 - speed and scalability
 - relevance/score
 - full-text index
 - could RDS do this? yeah
 
 
-
-## Work We Need
+# Work We Need
 ### Data team
 - profile and clean
 - manually change if needed
@@ -37,3 +33,11 @@
 
 ### Product team (frontend)
 - invoke via REST
+
+
+# What can we do with ES
+- score
+
+# What cant we do with ES
+- joins
+- queries without index
