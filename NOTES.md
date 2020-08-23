@@ -24,5 +24,5 @@
 - formulate the query
 - serve the data via REST
 
-## Product team (frontend)
+### Product team (frontend)
 - invoke via REST
