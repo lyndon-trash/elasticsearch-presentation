@@ -16,6 +16,7 @@
 ## Work We Need
 ### Data team
 - profile and clean
+- manually change if needed
 - aggregate data into a normalized form
 
 ### Product team (backend)
