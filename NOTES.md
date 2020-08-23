@@ -38,6 +38,7 @@
 # What can we do with ES
 - score
 - customize the index (multiple index, same fields)
+- scale infinitely
 
 # What cant we do with ES
 - joins
