@@ -1,3 +1,11 @@
+# Search
+- "search" is a central comcept to the application
+
+# Agenda
+- basics of ES
+- effort needed to build search
+- capabilities and limitations
+
 # What is ES
 - search index
 - document
