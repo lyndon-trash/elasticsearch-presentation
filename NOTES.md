@@ -7,9 +7,24 @@
 - capabilities and limitations
 
 # What is ES
-- search index
-- document
-- index before query
+For our intents and purpose:
+- document storage
+```
+- compare this with regular db
+- tree structure / nested
+- designed for denormalization
+```
+- search engine
+```
+- the core feature 
+```
+- the ELK stack has other features, but we are only taking advantage of the core functionality
+```
+- log aggregation
+- application monitoring
+- machine learning
+- data analytics
+```
 
 # Work We Need
 ### Data team
