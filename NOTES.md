@@ -51,9 +51,11 @@ before we even prepare the ES indexes and serve the data, the data team will be 
 - ultimately: they will aggregate data into a normalized form into REDSHIFT
 
 ### Product team (backend)
+Once the data team have it nice and tidy, the final phase of transforming the data into an application-consumable form begins
+
 - prepare the index
 ```
-- know the query beforehand
+- know the query beforehand, this will be provided in the specs
 - denormalize if needed
 - recreate the index if there are new requirements
 ```
