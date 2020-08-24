@@ -1,5 +1,6 @@
 # Search
 - "search" is a central comcept to the application
+- the culmination of all the work of the data team
 
 # Agenda
 - basics of ES
@@ -42,6 +43,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyze
 
 # Work We Need
 ### Data team
+before we even prepare the ES indexes, the data team 
 - profile and clean
 - manually change if needed
 - aggregate data into a normalized form
