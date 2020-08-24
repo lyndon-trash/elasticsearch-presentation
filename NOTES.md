@@ -67,16 +67,35 @@ Once the data team have it nice and tidy, the final phase of transforming the da
 ```
 - serve the data via REST
 
-### Product team (frontend)
-- invoke via REST
+
+
+## QUESTIONS BEFORE PROCEEDING
 
 
 # What can we do with ES
-- score
-- customize the index (multiple index, same fields)
-- scale infinitely
-- could RDS do this? yeah
+why did we even choose ES? cant we just use a regular database?
+
+- PERFORM COMPLEX QUERIES WITH MINIMAL EFFORT
+
+- CUSTOMIZE THE SORTING
+
+- SCALE INFINITELY
+```
+- add nodes as our data grows
+- shard and replicate our data for even better performance
+```
 
 # What cant we do with ES
-- joins
-- queries without index
+- JOINS
+```
+joins are not scalable
+we work around this limitation by doing data denormalization
+```
+
+- AD HOC QUERIES
+```
+also not scalable
+
+let say a new requirement comes in? 
+we need to recreate the index if the current index cant support the new query
+```
