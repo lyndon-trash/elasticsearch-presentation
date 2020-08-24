@@ -24,7 +24,12 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/range.html
 - search engine
 ```
 - performs analysis on the documents during insert
---- highly customizable
+--- highly customizable (analyzers and tokenizers)
+https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyzers.html
+-- commonly used:
+--- standard (whitespace)
+--- edge n-gram (autocomplete)
+
 --- multiple indexes for a single field
 ```
 - the ELK stack has other features, but we are only taking advantage of the core functionality
