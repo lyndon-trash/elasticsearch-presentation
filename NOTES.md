@@ -1,6 +1,8 @@
 # Search
-- "search" is a central comcept to the application
+- "search" is a central concept/functionality to the application that i think it is something work discussing
+- also used for autocomplete when we can
 - the culmination of all the work of the data team, the primary way of getting access to the candidate data
+- when a user searches for a candidate, this is the first place that he or she goes to
 
 # Agenda
 - basics of ES
