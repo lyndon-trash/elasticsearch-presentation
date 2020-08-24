@@ -23,7 +23,9 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/range.html
 ```
 - search engine
 ```
-- the core feature 
+- performs analysis on the documents during insert
+--- highly customizable
+--- multiple indexes for a single field
 ```
 - the ELK stack has other features, but we are only taking advantage of the core functionality
 ```
