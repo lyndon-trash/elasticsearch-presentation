@@ -11,8 +11,15 @@ For our intents and purpose:
 - document storage
 ```
 - compare this with regular db
-- tree structure / nested
-- designed for denormalization
+- row = document
+- table = index
+- column = field
+--- basic: strings, numbers, dates, boolean, range, 
+--- geo-spatial: lat/lng
+--- complex: object/nested, arrays
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-types.html
+https://www.elastic.co/guide/en/elasticsearch/reference/current/range.html
 ```
 - search engine
 ```
