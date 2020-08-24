@@ -1,6 +1,6 @@
 # Search
 - "search" is a central comcept to the application
-- the culmination of all the work of the data team
+- the culmination of all the work of the data team, the primary way of getting access to the candidate data
 
 # Agenda
 - basics of ES
@@ -42,11 +42,13 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-analyze
 ```
 
 # Work We Need
+Before we begin running our searches, a ton of work happens in the background
+
 ### Data team
-before we even prepare the ES indexes, the data team 
-- profile and clean
-- manually change if needed
-- aggregate data into a normalized form
+before we even prepare the ES indexes and serve the data, the data team will be working way ahead
+- ingest data from various sources
+- profile and cleanup the data
+- ultimately: they will aggregate data into a normalized form into REDSHIFT
 
 ### Product team (backend)
 - prepare the index
