@@ -76,8 +76,16 @@ Once the data team have it nice and tidy, the final phase of transforming the da
 why did we even choose ES? cant we just use a regular database?
 
 - PERFORM COMPLEX QUERIES WITH MINIMAL EFFORT
+```
+queries are unsurprisingly just documents that describe other documents
+```
 
 - CUSTOMIZE THE SORTING
+```
+add weights to influence the sort
+some fields are more important than others
+we can even remove the score for filters
+```
 
 - SCALE INFINITELY
 ```
