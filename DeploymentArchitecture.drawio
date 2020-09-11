@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-09-11T01:15:06.778Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15" etag="3p45jhCZI-IOz3h7aDLI" version="13.6.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-09-11T01:15:51.965Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15" etag="va6DKaB6xUsGtJjz5Qht" version="13.6.9" type="github">
   <diagram id="PBuqDmoNERAhhBaiXPwx" name="Page-1">
     <mxGraphModel dx="986" dy="1431" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -29,7 +29,7 @@
           <mxGeometry x="295" y="70" width="190" height="120" as="geometry" />
         </mxCell>
         <mxCell id="74s0_8JVzeUw9BwYuhrC-9" value="&lt;h1&gt;AWS&lt;/h1&gt;&lt;p&gt;Cluster host and docker image repository&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="610" y="20" width="190" height="120" as="geometry" />
+          <mxGeometry x="590" y="70" width="190" height="120" as="geometry" />
         </mxCell>
         <mxCell id="74s0_8JVzeUw9BwYuhrC-10" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -76,7 +76,7 @@
         </mxCell>
         <mxCell id="74s0_8JVzeUw9BwYuhrC-22" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="120" y="620" as="sourcePoint" />
+            <mxPoint x="90" y="620" as="sourcePoint" />
             <mxPoint x="520" y="620" as="targetPoint" />
           </mxGeometry>
         </mxCell>
@@ -136,6 +136,12 @@
         </mxCell>
         <mxCell id="74s0_8JVzeUw9BwYuhrC-36" value="&lt;h1&gt;Deploy&lt;/h1&gt;&lt;p&gt;Once the docker image is deployed, the user will then have the option to deploy that specific build version. this will trigger the cluster to pull the new version from the docker repository&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;shadow=1;glass=0;" vertex="1" parent="1">
           <mxGeometry x="470" y="730" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="74s0_8JVzeUw9BwYuhrC-37" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="790" as="sourcePoint" />
+            <mxPoint x="120" y="20" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
