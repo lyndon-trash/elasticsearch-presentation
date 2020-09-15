@@ -1,1 +1,37 @@
-<mxfile host="app.diagrams.net" modified="2020-09-15T03:42:39.283Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15" version="13.6.10" etag="TjEd82zLrXk6Gxxw9Vif" type="github"><diagram id="pL7Jz_KBDtLuX8aulEim">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-09-15T03:54:47.444Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.2 Safari/605.1.15" etag="E4R5M2xvAG35dx02ulGc" version="13.6.10" type="github">
+  <diagram id="pL7Jz_KBDtLuX8aulEim" name="Page-1">
+    <mxGraphModel dx="986" dy="1431" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1Vq5WX_l2kxpJ_nkoxu3-1" value="" style="outlineConnect=0;fontColor=#232F3E;gradientColor=#945DF2;gradientDirection=north;fillColor=#5A30B5;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elasticsearch_service;" vertex="1" parent="1">
+          <mxGeometry x="110" y="210" width="78" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="1Vq5WX_l2kxpJ_nkoxu3-2" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.redshift;fillColor=#2E73B8;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="390" y="213" width="67.5" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="1Vq5WX_l2kxpJ_nkoxu3-3" value="" style="shape=flexArrow;endArrow=classic;html=1;" edge="1" parent="1" source="1Vq5WX_l2kxpJ_nkoxu3-2" target="1Vq5WX_l2kxpJ_nkoxu3-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="280" as="sourcePoint" />
+            <mxPoint x="360" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1Vq5WX_l2kxpJ_nkoxu3-4" value="&lt;h1&gt;(1) Store&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Pre-process&lt;/li&gt;&lt;li&gt;Tokenize&lt;/li&gt;&lt;li&gt;Filter tokens&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="120" width="190" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="1Vq5WX_l2kxpJ_nkoxu3-5" value="&lt;h1 style=&quot;font-size: 8px&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h1&gt;&lt;h1 style=&quot;font-size: 8px&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h1&gt;&lt;h1 style=&quot;font-size: 8px&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;{&lt;/font&gt;&lt;/h1&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;&amp;nbsp; &quot;id&quot;: &quot;1000001&quot;,&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;&amp;nbsp; &quot;name&quot;: &quot;Test McTesty&quot;,&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;&amp;nbsp; &quot;function&quot;: &quot;Senior Software Engineer&quot;&lt;/font&gt;&lt;/div&gt;&lt;h1 style=&quot;font-size: 8px&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;}&lt;/font&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="100" width="162" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="1Vq5WX_l2kxpJ_nkoxu3-6" value="REDSHIFT" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="305" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1Vq5WX_l2kxpJ_nkoxu3-7" value="ELASTICSEARCH" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="89" y="305" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="1Vq5WX_l2kxpJ_nkoxu3-8" value="&lt;h1 style=&quot;font-size: 8px&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h1&gt;&lt;h1 style=&quot;font-size: 8px&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/h1&gt;&lt;h1 style=&quot;font-size: 8px&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;{&lt;/font&gt;&lt;/h1&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;&amp;nbsp;&quot;id&quot;: &quot;100000&quot;,&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;&amp;nbsp; &quot;name&quot;: &quot;Test McTesty&quot;,&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;&amp;nbsp;&quot;name.lowercase&quot;: &quot;test mctesty&quot;,&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;&amp;nbsp; &quot;function&quot;: [&quot;senior&quot;, &quot;software&quot;, &quot;engineer&quot;],&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;&amp;nbsp; &quot;function.keyword&quot;: &quot;Senior Software Engineer&quot;,&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;&amp;nbsp; &quot;function.seniority&quot;: &quot;Senior&quot;,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;&amp;nbsp; &quot;function.lowercase&quot;: &quot;senior software engineer&quot;,&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 8px&quot;&gt;&amp;nbsp; &quot;function.noSeniority&quot;: &quot;Software Engineer&quot;&lt;/span&gt;&lt;/div&gt;&lt;h1 style=&quot;font-size: 8px&quot;&gt;&lt;font style=&quot;font-size: 8px&quot;&gt;}&lt;/font&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=#6c8ebf;fillColor=#dae8fc;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="200" height="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
